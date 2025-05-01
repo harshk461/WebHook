@@ -12,7 +12,8 @@ const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: process.env.DATABASE_PASSWORD,
-  database: 'webhook'
+  database: 'webhook',
+  port:'3307',
 });
 
 db.connect(err => {
