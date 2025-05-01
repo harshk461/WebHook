@@ -25,6 +25,7 @@ db.connect(err => {
 app.post('/webhook', (req, res) => {
   const body = req.body;
 
+  console.log(body);
   const pusher = body.pusher?.name || '';
   const repo = body.repository?.name || '';
   const branch = body.ref?.split('/').pop() || '';
